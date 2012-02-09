@@ -176,7 +176,7 @@ class M2MRelationship extends SugarRelationship
         {
             foreach($this->def['fields'] as $fieldDef)
             {
-                if (!empty($fieldDef['name']) && !isset($row[$fieldDef['name']]) && !empty($fieldDef['default']))
+                if (!empty($fieldDef['name']) && !isset($row[$fieldDef['name']]) && isset($fieldDef['default']))
                 {
                     $row[$fieldDef['name']] = $fieldDef['default'];
                 }
