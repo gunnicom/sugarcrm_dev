@@ -42,6 +42,11 @@ $dictionary['accounts_contacts'] = array ( 'table' => 'accounts_contacts'
       , array('name' =>'account_id', 'type' =>'varchar', 'len'=>'36')
       , array ('name' => 'date_modified','type' => 'datetime')
       , array('name' =>'deleted', 'type' =>'bool', 'len'=>'1', 'required'=>false, 'default'=>'0')
+      // Testvalues for Bug repair Relationships required of course ;)
+      // Fields like this may be required for relationships like the Contacts-Opportunities relation
+      , array('name' =>'testvalueerror', 'type' =>'int', 'len'=>'11', 'default'=>'0', 'required'=>false) // This one will fail as '0' gets replaced by ''
+      , array('name' =>'testvalueworks', 'type' =>'int', 'len'=>'11', 'default'=>'1', 'required'=>false) // This works as '1' is not empty()
+      // End Testvalues
                                                       )                                  , 'indices' => array (
        array('name' =>'accounts_contactspk', 'type' =>'primary', 'fields'=>array('id'))
       , array('name' => 'idx_account_contact', 'type'=>'alternate_key', 'fields'=>array('account_id','contact_id'))
