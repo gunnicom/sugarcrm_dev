@@ -2165,17 +2165,11 @@ td.edit.view td[align=right]
 	height:auto;
 }
 
-/* 
-Bug 33193 - Fixed several items in the sugarfeeds not correctly scrolling on IE7; 
-added the *position:static CSS property on the following two rules, which will only
-be used on IE7 and IE6
-*/
 .sugarFeedDashlet .byLineBox
 {
 	width:100%;
 	position:relative;
-	*position:static;
-	overflow: none;
+	overflow: hidden;
 }
 
 .sugarFeedDashlet .byLineBox .byLineLeft
