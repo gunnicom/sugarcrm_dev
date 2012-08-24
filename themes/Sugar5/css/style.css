@@ -385,7 +385,6 @@ div#content noLeftColumn
     margin-bottom: 4px;
     margin-top: 2px;
     max-width: 140px;
-    *width: expression(this.clientWidth > 140 ? '140px':true);
 }
 #newRecord form button,
 #newRecord form input[type=button],
@@ -2179,11 +2178,6 @@ be used on IE7 and IE6
 	overflow: none;
 }
 
-.sugarFeedDashlet .yui-ac-input
-{
-    *position:static !important;
-}
-
 .sugarFeedDashlet .byLineBox .byLineLeft
 {
 	font-size:79%;
@@ -3613,8 +3607,6 @@ ul.tablist li a.current:link, ul.tablist li a.current:visited, ul.tablist li a.c
 	float:right;
 	zoom: 1;
 	display: inline;
-	*float: none;
-	*width: 18px;
 }
 .moduleTitle .star 
 {
@@ -3969,9 +3961,6 @@ ul#selectLink.clickMenu #massall{
 
 ul.clickMenu.show {
     display:inline-block;
-    /*css hack for IE*/
-    *display:inline;
-    *zoom:1;
 }
 
 ul#selectLink.clickMenu > li > a{
