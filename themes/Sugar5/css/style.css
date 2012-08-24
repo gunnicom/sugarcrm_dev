@@ -1095,7 +1095,7 @@ div.indent_right {
 }	
     
 #horizWrapper {position:relative; margin-left:60px;width:218px;float:left;}
-#horizBGDiv {position:relative; top:60px; background:url(../../../../index.php?entryPoint=getImage&imageName=horizBg.png) no-repeat; height:26px; width:218px;z-index:5 }	
+#horizBGDiv {position:relative; top:60px; background:url('../../../../index.php?entryPoint=getImage&imageName=horizBg.png') no-repeat; height:26px; width:218px;z-index:5 }	
 #horizHandleDiv { 
     position:absolute; 
     left: 100px; /* the default position is the center of the bg */
@@ -2193,7 +2193,7 @@ iframe.teamNoticeBox
 .loading-indicator
 {
 	font-size:11px;
-	background-image:url(../default/ext/resources/images/default/grid/loading.gif);
+	background-image:url('../default/ext/resources/images/default/grid/loading.gif');
 	background-repeat:no-repeat;
 	background-position:left;
 	padding-left:20px;
@@ -2337,7 +2337,7 @@ a:link, a:visited, a:hover
 }
 
 .buttonSlide.yui-module .yui-hd .toggle em { 
-	background-image: url(../../../../index.php?entryPoint=getImage&imageName=slider_button_more.png);
+	background-image: url('../../../../index.php?entryPoint=getImage&imageName=slider_button_more.png');
 	background-repeat: no-repeat;
 	display: inline; /* prevent IE margin doubling */
     overflow:hidden;
@@ -2350,7 +2350,7 @@ a:link, a:visited, a:hover
 }
 
 .buttonSlide.yui-module.yui-closed .yui-hd .toggle em { 
-	background-image: url(../../../../index.php?entryPoint=getImage&imageName=slider_button_less.png);
+	background-image: url('../../../../index.php?entryPoint=getImage&imageName=slider_button_less.png');
 }
 
 .buttonSlide .yui-bd { 
@@ -2752,7 +2752,7 @@ ul.subpanelTablist li a.current, ul.subpanelTablist li a.current:hover
     border-color: #c1c1c1;
     background-color: #f0f0f0;
     color: #000;
-    background-image: url(../../../../index.php?entryPoint=getImage&imageName=bgBtnGray.gif);
+    background-image: url('../../../../index.php?entryPoint=getImage&imageName=bgBtnGray.gif');
 }
 
 .pagination button [title="Return to List"]:hover{
@@ -3037,7 +3037,7 @@ h1, h2, h3
 }
 .h3Row 
 {
-	background-image: url(../../../../index.php?entryPoint=getImage&imageName=bg.gif);
+	background-image: url('../../../../index.php?entryPoint=getImage&imageName=bg.gif');
 }
 h4, h5
 {
@@ -3056,7 +3056,7 @@ button, input[type=submit], input[type=reset], input[type=button], .button
 	border-color: #abc3d7;
 	background-color: #ecf1f4;
 	color: #000;
-	background-image: url(../../../../index.php?entryPoint=getImage&imageName=bgBtn.gif);
+	background-image: url('../../../../index.php?entryPoint=getImage&imageName=bgBtn.gif');
 }
 button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover,
 button:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus,
@@ -3070,7 +3070,7 @@ button[disabled], input[type=submit][disabled], input[type=reset][disabled], inp
 	border-color: #c1c1c1;
 	background-color: #f0f0f0;
 	color: #000;
-	background-image: url(../../../../index.php?entryPoint=getImage&imageName=bgBtnGray.gif);
+	background-image: url('../../../../index.php?entryPoint=getImage&imageName=bgBtnGray.gif');
 }
 input,select 
 {
@@ -3106,13 +3106,13 @@ textarea
 /* for the main screen navigation tabs */
 #moduleList 
 {
-    background-image : url(../../../../index.php?entryPoint=getImage&imageName=tabRowBg.gif);
+    background-image : url('../../../../index.php?entryPoint=getImage&imageName=tabRowBg.gif');
     background-repeat: repeat-x;
     border-bottom-color: #0046ad;
 }
 #moduleList > ul > li
 {
-    background-image:url(../../../../index.php?entryPoint=getImage&themeName=Sugar55&imageName=otherTab.gif);
+    background-image:url('../../../../index.php?entryPoint=getImage&themeName=Sugar55&imageName=otherTab.gif');
 }
 #moduleList ul li span.currentTab a:link, 
 #moduleList ul li span.currentTab a:visited, 
@@ -3133,7 +3133,7 @@ textarea
 #moduleList ul li span.currentTabRight, 
 #moduleList ul li span.currentTab 
 {
-    background-image : url(../../../../index.php?entryPoint=getImage&imageName=currentTab.gif);
+    background-image : url('../../../../index.php?entryPoint=getImage&imageName=currentTab.gif');
     background-repeat: no-repeat;
     border-bottom-color: #4e8ccf;
 }
@@ -3438,7 +3438,7 @@ h5.calSharedUser
     color: #444;
     background-color: #fff;
     border-color: #abc3d7;
-    background-image: url(../../../../index.php?entryPoint=getImage&imageName=bg.gif);
+    background-image: url('../../../../index.php?entryPoint=getImage&imageName=bg.gif');
 }
 
 /* for subpanel tabs */
@@ -3567,7 +3567,7 @@ ul.tablist li a.current:link, ul.tablist li a.current:visited, ul.tablist li a.c
 }
 
 .yuimenuitem-hassubmenu > a{
-    background-image: url(../../../../index.php?entryPoint=getImage&themeName=Sugar55&imageName=sugar-yui-sprites.png);
+    background-image: url('../../../../index.php?entryPoint=getImage&themeName=Sugar55&imageName=sugar-yui-sprites.png');
 }
 
  .yui-navset .yui-nav li a,.yui-navset-top .yui-nav li a, .yui-navset-bottom .yui-nav li a,
@@ -3717,7 +3717,7 @@ ul.clickMenu li span.ab { /*--Drop down trigger styles--*/
 	width: 17px;
 	height: 16px;
 	float: left;
-	background: url(../../../../index.php?entryPoint=getImage&imageName=actionMenuArrow.png) no-repeat 6px -28px;
+	background: url('../../../../index.php?entryPoint=getImage&imageName=actionMenuArrow.png') no-repeat 6px -28px;
 	cursor: pointer;
 }
 
@@ -3910,7 +3910,7 @@ ul#globalLinks.clickMenu {
 
 ul#globalLinks.clickMenu li > span {
 	height: 43px;
-	background-image: url(../../../../index.php?entryPoint=getImage&imageName=tabDownArrowOff.png);
+	background-image: url('../../../../index.php?entryPoint=getImage&imageName=tabDownArrowOff.png');
 	background-position: right center;
 	width: auto;
 	margin-right: 10px;
@@ -3991,7 +3991,7 @@ ul#detailViewActions.clickMenu {
 	width: 17px;
 	height: 17px;
 	float: left;
-	background: url(../../../../index.php?entryPoint=getImage&imageName=actionMenuArrow.png) no-repeat 6px -28px;
+	background: url('../../../../index.php?entryPoint=getImage&imageName=actionMenuArrow.png') no-repeat 6px -28px;
 	opacity: .5;
 	}
 
@@ -4030,7 +4030,7 @@ ul#detailViewActions.clickMenu {
 
 }
 #quickCreate ul.clickMenu li > span {
-	background: url(../../../../index.php?entryPoint=getImage&imageName=quick-create.png) no-repeat center center;
+	background: url('../../../../index.php?entryPoint=getImage&imageName=quick-create.png') no-repeat center center;
 	height: 43px;
 	width: 50px;
 }
