@@ -1096,7 +1096,7 @@ div.indent_right {
 }	
     
 #horizWrapper {position:relative; margin-left:60px;width:218px;float:left;}
-#horizBGDiv {position:relative; top:60px; background:url(../../../../index.php?entryPoint=getImage&imageName=horizBg.png) no-repeat; height:26px; width:218px;zindex:5 }	
+#horizBGDiv {position:relative; top:60px; background:url(../../../../index.php?entryPoint=getImage&imageName=horizBg.png) no-repeat; height:26px; width:218px;z-index:5 }	
 #horizHandleDiv { 
     position:absolute; 
     left: 100px; /* the default position is the center of the bg */
@@ -1119,7 +1119,7 @@ div.indent_right {
     width:99%;
     margin: 0 0 3px;
     padding-right:0 !important;
-    padding-left:10 !important;
+    padding-left:10px !important;
     padding-top:10px !important;
 }
 /* sitemap */
@@ -1565,8 +1565,8 @@ table.reportlistView{
     padding: 4px 5px 4px 5px;
     border-left: none;
     border-right: none;
-    border-top: 1px solid Blackccc;
-    border-bottom: 1px solid Blackccc;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     background:Gainsboro;
 }
 
@@ -2089,7 +2089,6 @@ td.edit.view td[align=right]
 .login .login_more
 {
     text-align:right;
-    *padding-right: 18px !important; /* only needed in IE7 and earlier */
 }
 
 #lastviewicon, #newrecordicon, #shortcuts_img,#lastviewicon_1, #newrecordicon_1, #shortcuts_img_1 {
@@ -3552,7 +3551,7 @@ ul.tablist li a.current:link, ul.tablist li a.current:visited, ul.tablist li a.c
 }
 
  .yui-layout .yui-layout-clip-right .collapse {
-    background: transparent url('../../../../index.php?entryPoint=getImage&themeName=Sugar55&imageName=sugar-yui-sprites.png') no-repeat -0 -110px;
+    background: transparent url('../../../../index.php?entryPoint=getImage&themeName=Sugar55&imageName=sugar-yui-sprites.png') no-repeat 0 -110px;
 }
 
  .yui-layout .yui-layout-unit-top div.yui-layout-hd .collapse {
