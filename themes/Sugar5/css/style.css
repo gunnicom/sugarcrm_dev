@@ -492,7 +492,7 @@ background:transparent none repeat scroll 0% 0%;
 }
 
 #subModuleList li.subTabMore ul.cssmenu{
-visibility:none;
+visibility:hidden;
 }
 
 #subModuleList li.subTabMore:hover ul.cssmenu{
