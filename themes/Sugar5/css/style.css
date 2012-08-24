@@ -2152,7 +2152,6 @@ td.edit.view td[align=right]
 {
 	overflow:auto;
 	max-height:375px;
-	height:expression(this.scrollHeight>375?'375px':'auto');
 }
 
 .sugarFeedDashlet td.list th, .sugarFeedDashlet td.list td[scope=col]
