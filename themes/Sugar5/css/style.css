@@ -3652,9 +3652,6 @@ ul.clickMenu {
 	padding: 0px 0px 0px 0px;
 	margin: 0 !important;
 	vertical-align: bottom;
-    background-color: #ECF1F4;
-    background-image: url("../../../../index.php?entryPoint=getImage&imageName=bgBtn.gif");
-    border: 1px solid #ABC3D7;
     color: #000000;
 	display: inline-block;
 }
@@ -3683,7 +3680,10 @@ ul.clickMenu:hover > li > span > a, ul.clickMenu:hover > li > a {
 ul.clickMenu li span.ab:hover {
 	background-position: 6px 0px;
 }
-ul.clickMenu li, ul.SugarActionMenuIESub li {
+ul.clickMenu>li, ul.SugarActionMenuIESub li {
+	background-color: #ECF1F4;
+	background-image: url('../../../../index.php?entryPoint=getImage&imageName=bgBtn.gif');
+	border: 1px solid #ABC3D7;
 	float: left;
 	margin: 0;	
 	padding: 0 0 0 0;
