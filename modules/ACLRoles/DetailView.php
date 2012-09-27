@@ -35,7 +35,14 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
  * "Powered by SugarCRM".
  ********************************************************************************/
 
-
+function langCompare($a, $b){
+    global $app_list_strings;
+    // Fallback to array key if translation is empty
+    $a=empty($app_list_strings['moduleList'][$a])?$a:$app_list_strings['moduleList'][$a];
+    $b=empty($app_list_strings['moduleList'][$b])?$b:$app_list_strings['moduleList'][$b];
+    if($a==$b) return 0;
+    return ($a<$b)?-1:1;
+}
 
 //global $modInvisList;
 $sugar_smarty = new Sugar_Smarty();
@@ -56,6 +63,9 @@ $role = new ACLRole();
 $role->retrieve($_REQUEST['record']);
 $categories = ACLRole::getRoleActions($_REQUEST['record']);
 $names = ACLAction::setupCategoriesMatrix($categories);
+
+// Sort by translated categories
+uksort($categories,"langCompare");
 
 $categories2 = array();
 $categories2=$categories;
