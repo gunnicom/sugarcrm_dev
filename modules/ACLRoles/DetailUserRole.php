@@ -40,6 +40,15 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 global $app_list_strings, $app_strings, $current_user;
 
+function langCompare($a, $b){
+    global $app_list_strings;
+    // Fallback to array key if translation is empty
+    $a=empty($app_list_strings['moduleList'][$a])?$a:$app_list_strings['moduleList'][$a];
+    $b=empty($app_list_strings['moduleList'][$b])?$b:$app_list_strings['moduleList'][$b];
+    if($a==$b) return 0;
+    return ($a<$b)?-1:1;
+}
+
 $mod_strings = return_module_language($GLOBALS['current_language'], 'Users');
 
 $focus = new User();
@@ -51,7 +60,9 @@ if ( !is_admin($focus) ) {
     $sugar_smarty->assign('APP_LIST', $app_list_strings);
     
     $categories = ACLAction::getUserActions($_REQUEST['record'],true);
-    
+    // Sort by translated categories
+    uksort($categories,"langCompare");
+
     //clear out any removed tabs from user display
     if(!$GLOBALS['current_user']->isAdminForModule('Users')){
         $tabs = $focus->getPreference('display_tabs');
