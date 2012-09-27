@@ -41,6 +41,16 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 global $app_list_strings;// $modInvisList
 
+function langCompare($a, $b) {
+    global $app_list_strings;
+    // Fallback to array key if translation is empty
+    $a = empty($app_list_strings['moduleList'][$a]) ? $a : $app_list_strings['moduleList'][$a];
+    $b = empty($app_list_strings['moduleList'][$b]) ? $b : $app_list_strings['moduleList'][$b];
+    if ($a == $b)
+        return 0;
+    return ($a < $b) ? -1 : 1;
+}
+
 $sugar_smarty = new Sugar_Smarty();
 
 $sugar_smarty->assign('MOD', $mod_strings);
@@ -82,6 +92,8 @@ if(isset($_REQUEST['return_module'])){
 }
 
 $sugar_smarty->assign('RETURN', $return);
+// Sort by translated categories
+uksort($categories, "langCompare");
 $names = ACLAction::setupCategoriesMatrix($categories);
 if(!empty($names))$tdwidth = 100 / sizeof($names);
 $sugar_smarty->assign('CATEGORIES', $categories);
