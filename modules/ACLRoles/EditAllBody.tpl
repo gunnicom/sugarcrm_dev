@@ -69,9 +69,7 @@
 
 	<TR id="ACLEditView_Access_{$CATEGORY_NAME}">
 	<td nowrap width='1%' id="ACLEditView_Access_{$CATEGORY_NAME}_category"><b>
-	{if $APP_LIST.moduleList[$CATEGORY_NAME]=='Users'}
-	   {$MOD.LBL_USER_NAME_FOR_ROLE}
-	{elseif !empty($APP_LIST.moduleList[$CATEGORY_NAME])}
+	{if !empty($APP_LIST.moduleList[$CATEGORY_NAME])}
 	   {$APP_LIST.moduleList[$CATEGORY_NAME]}
 	{else}
         {$CATEGORY_NAME}
