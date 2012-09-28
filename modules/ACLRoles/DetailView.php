@@ -57,20 +57,10 @@ $role->retrieve($_REQUEST['record']);
 $categories = ACLRole::getRoleActions($_REQUEST['record']);
 $names = ACLAction::setupCategoriesMatrix($categories);
 
-$categories2 = array();
-$categories2=$categories;
-$hidden_categories = array(
-"KBDocuments", "Campaigns","Forecasts","ForecastSchedule",
-"Emails","EmailTemplates","EmailMarketing","Reports");
-foreach($hidden_categories as $v){
-	if (isset($categories2[$v])) {
-	   unset($categories2[$v]);
-	}
-}
 if(!empty($names))$tdwidth = 100 / sizeof($names);
 $sugar_smarty->assign('ROLE', $role->toArray());
 $sugar_smarty->assign('CATEGORIES', $categories);
-$sugar_smarty->assign('CATEGORIES2', $categories2);
+
 $sugar_smarty->assign('TDWIDTH', $tdwidth);
 $sugar_smarty->assign('ACTION_NAMES', $names);
 
