@@ -59,11 +59,13 @@
 
 
 	<TR>
-	{if $APP_LIST.moduleList[$CATEGORY_NAME]=='Users'}
-	<td nowrap width='1%' scope="row"><b>{$MOD.LBL_USER_NAME_FOR_ROLE}</b></td>
+        <td nowrap width='1%' scope="row"><b>
+	{if !empty($APP_LIST.moduleList[$CATEGORY_NAME])}
+	   {$APP_LIST.moduleList[$CATEGORY_NAME]}
 	{else}
-	<td nowrap width='1%' scope="row"><b>{$APP_LIST.moduleList[$CATEGORY_NAME]}</b></td>
+        {$CATEGORY_NAME}
 	{/if}
+        </b></td>
 	{foreach from=$ACTION_NAMES item="ACTION_LABEL" key="ACTION_NAME"}
 		{assign var='ACTION_FIND' value='false'}
 		{foreach from=$TYPES item="ACTIONS" key="TYPE_NAME"}
