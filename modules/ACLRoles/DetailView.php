@@ -81,7 +81,7 @@ $params[] = "<a href='index.php?module=ACLRoles&action=index'>{$mod_strings['LBL
 $params[] = $role->get_summary_text();
 echo getClassicModuleTitle("ACLRoles", $params, true);
 //$sugar_smarty->assign('TITLE', $title);
-$hide_hide_supanels = true;
+
 
 echo $sugar_smarty->fetch('modules/ACLRoles/DetailView.tpl');
 //for subpanels the variable must be named focus;
