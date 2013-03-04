@@ -112,15 +112,15 @@ class Importer
 
     public function import()
     {
-        foreach($this->importSource as $row)
-        {
-            $this->importRow($row);
-        }
-
         // save mapping if requested
         if ( isset($_REQUEST['save_map_as']) && $_REQUEST['save_map_as'] != '' )
         {
             $this->saveMappingFile();
+        }
+        
+        foreach($this->importSource as $row)
+        {
+            $this->importRow($row);
         }
 
         $this->importSource->writeStatus();
