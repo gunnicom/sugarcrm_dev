@@ -71,6 +71,7 @@ $filter_for_valid_editable_attributes =
          array('type'=>'long','source'=>'db'),
          array('type'=>'double','source'=>'db'),
          array('type'=>'float','source'=>'db'),
+         array('type'=>'decimal','source'=>'db'),
          array('type'=>'short','source'=>'db'),
          array('dbType'=>'varchar','source'=>'db'),
          array('dbType'=>'double','source'=>'db'),
@@ -267,6 +268,7 @@ foreach ($temp_field_array as $field_array) {
             case ('int') :
             case ('float') :
             case ('double') :
+            case ('decimal') :
             case ('currency') :
 
                 $xtpl->assign("EDIT_FIELD_VALUE", $select_row_curr_field_value);
